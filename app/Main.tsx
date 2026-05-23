@@ -16,10 +16,10 @@ const skills = [
 
 export default function Home() {
   return (
-    <div className="space-y-16 divide-y divide-gray-200 dark:divide-gray-700">
+    <div className="space-y-16">
 
       {/* Hero */}
-      <div className="flex flex-col-reverse items-center gap-8 pt-10 sm:flex-row sm:justify-between">
+      <div className="flex flex-col items-center gap-8 pt-10 text-center sm:flex-row sm:text-left sm:justify-between">
         <div className="space-y-4">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100">
             Hi, I'm Brent
@@ -42,8 +42,8 @@ export default function Home() {
       </div>
 
       {/* About */}
-      <div className="space-y-4 pt-10">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+      <div id="about" className="space-y-4 pt-10 text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           About Me
         </h2>
         <div className="prose max-w-none text-gray-600 dark:text-gray-400">
@@ -54,29 +54,31 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <div id="projects" className="space-y-4 pt-10">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+      <div id="projects" className="space-y-4 pt-10 text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           Projects
         </h2>
-        <div className="-m-4 flex flex-wrap">
+        <div className="-m-4 flex flex-wrap justify-center">
           {projectsData.map((d) => (
             <Card
               key={d.title}
               title={d.title}
               description={d.description}
               imgSrc={d.imgSrc}
-              href={d.href}
+              slug={d.slug}
+              demoHref={d.demoHref}
+              githubHref={d.githubHref}
             />
           ))}
         </div>
       </div>
 
       {/* Skills */}
-      <div className="space-y-4 pt-10">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-          Tools & Skills
+      <div id="skills" className="space-y-4 pt-10 text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+          Skills
         </h2>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 justify-center">
           {skills.map((skill) => (
             <span
               key={skill}
@@ -89,8 +91,8 @@ export default function Home() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="space-y-4 pt-10 pb-10">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+      <div id="contact" className="space-y-4 pt-10 pb-10 text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           Get in Touch
         </h2>
         <p className="text-gray-600 dark:text-gray-400">
