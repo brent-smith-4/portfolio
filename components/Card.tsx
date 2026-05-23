@@ -24,7 +24,7 @@ const Card = ({ title, description, imgSrc, slug, demoHref, githubHref }) => (
           {/* Learn More — comment out when write-ups are not ready */}
           {slug && (
             <Link
-              href={`/projects/${slug}`}
+              href={`/${slug}`}
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
             >
               Learn more &rarr;
