@@ -20,6 +20,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <article className="mx-auto max-w-3xl py-10 space-y-6">
+      <a
+        href="/#projects"
+        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
+      >
+        &larr; Back to Projects
+      </a>
       <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {project.title}
       </h1>
