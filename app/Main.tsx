@@ -27,7 +27,7 @@ export default function Home() {
           <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-400">
             Aspiring Data Scientist based in Atlanta, GA. I build data-driven projects to develop
             my skills and transition into the field - from NLP-powered apps to causal inference
-            analyses.
+            analyses and more.
           </p>
         </div>
         <div className="shrink-0">
@@ -48,7 +48,24 @@ export default function Home() {
         </h2>
         <div className="prose max-w-none text-gray-600 dark:text-gray-400">
           <p>
-            Write your bio here. Edit this directly in <code>app/Main.tsx</code>.
+            I've always been a builder, a solver, and a storyteller, though it took me a while to find the field that matched all three.
+          </p>
+          <p>
+            The builder came first; I was obsessed with Legos growing up (specifically Star Wars). I would create elaborate worlds for my figures to "live" in, tinkering with my own vehicles and building creations that weren't on any box set.
+            The storyteller came second; I would obsess over drawing fictional fantasy stories to enact in my backyard with friends, both real and imaginary, making sure to hit every cathartic note.
+            The solver came at the end; as a kid I was the one poring over video game guidebooks for Pokémon and Destiny, trying to master drop rates, damage formulas, and the most optimal build for whatever challenge was ahead. I was doing analysis, even if I didn't know it then.
+            These are all still instincts I can't shake: I love puzzles and worldbuilding, I'm currently taking my high school English teacher's advice and writing a fantasy book series in my free time, and I'm also working on a causal analysis project for the roguelike card game Slay the Spire.
+          </p>
+          <p>
+            That's what eventually pointed me toward a degree in economics, with a computer science minor, from the University of Georgia. Economics taught me how to identify and solve the cause-and-effect problems in the world, while computer science showed me how to build toward those solutions myself.
+            Data science is where those two ideas merge beautifully: you need to know what you're looking to solve, how to solve it with data, and how to tell a story with that data in a way that engages people who don't care for all the math behind it.
+            Today I work on the data-quality side of machine learning at Shiplify, auditing shipment and property records and applying ground-truth labels to ambiguous, messy real-world cases.
+          </p>
+          <p>
+            Now I'm building toward a professional career in data science, where the building, the solving, and the storytelling finally live in the same job: building systems, solving problems that don't have clean definitions or answers, and telling the story of what the data actually means.
+          </p>
+          <p>
+            Now, let me be clear: I'm not all work and no play. I love cooking, which is exactly where the Mise project came from. I paint to relax, play my share of video games (League of Legends, Cyberpunk 2077, Helldivers 2, and many more), and watch a lot of sports: NFL (go Bengals!) and NBA (Pacers, Pistons, Cavs). Yes, I was born a Midwest boy. Most importantly of all, I have a deep bond with my family and friends, and I spend time with them whenever I can.
           </p>
         </div>
       </div>
