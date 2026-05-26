@@ -2,6 +2,11 @@ import { allProjects } from 'contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { notFound } from 'next/navigation'
 import { genPageMetadata } from 'app/seo'
+import NextImage from 'next/image'
+
+const Image = (props: React.ComponentProps<typeof NextImage>) => (
+  <NextImage {...props} style={{ maxWidth: '100%', height: 'auto', width: 'auto' }} />
+)
 
 export const generateStaticParams = async () =>
   allProjects.map((p) => ({ slug: p.slug }))
@@ -53,7 +58,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         )}
       </div>
       <div className="prose max-w-none dark:prose-invert">
-        <MDXLayoutRenderer code={project.body.code} />
+        <MDXLayoutRenderer code={project.body.code} components={{ Image }} />
       </div>
     </article>
   )

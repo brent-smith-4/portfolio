@@ -96,6 +96,9 @@ module.exports = () => {
       ]
     },
     webpack: (config, options) => {
+      if (process.platform === 'win32') {
+        config.cache = false
+      }
       config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
