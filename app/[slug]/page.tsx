@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <article className="mx-auto max-w-3xl space-y-6 py-10">
       <Link
         href="/#projects"
-        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base font-medium leading-6"
+        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
       >
         &larr; Back to Projects
       </Link>
