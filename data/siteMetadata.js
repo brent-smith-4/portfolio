@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Brent Smith',
   author: 'Brent Smith',
   headerTitle: 'Brent Smith',
-  description: 'Aspiring Data Scientist based in Atlanta, GA — projects, skills, and a bit about me.',
+  description: 'Data Scientist based in Atlanta, GA — NLP, causal inference, and machine learning projects.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://brentsmith.dev',

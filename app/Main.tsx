@@ -49,9 +49,8 @@ export default function Home() {
             Hi, I'm Brent
           </h1>
           <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-            Data Scientist based in Atlanta, GA. I build data-driven projects to develop
-            my skills and transition into the field - from NLP-powered apps to causal inference
-            analyses and more.
+            Data Scientist based in Atlanta, GA. I build data-driven projects at the
+            intersection of NLP, causal inference, and machine learning.
           </p>
         </div>
         <div className="shrink-0">
