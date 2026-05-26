@@ -3,13 +3,13 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { notFound } from 'next/navigation'
 import { genPageMetadata } from 'app/seo'
 import NextImage from 'next/image'
+import Link from 'next/link'
 
 const Image = (props: React.ComponentProps<typeof NextImage>) => (
   <NextImage {...props} style={{ maxWidth: '100%', height: 'auto', width: 'auto' }} />
 )
 
-export const generateStaticParams = async () =>
-  allProjects.map((p) => ({ slug: p.slug }))
+export const generateStaticParams = async () => allProjects.map((p) => ({ slug: p.slug }))
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params
@@ -24,13 +24,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound()
 
   return (
-    <article className="mx-auto max-w-3xl py-10 space-y-6">
-      <a
+    <article className="mx-auto max-w-3xl space-y-6 py-10">
+      <Link
         href="/#projects"
-        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
+        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base font-medium leading-6"
       >
         &larr; Back to Projects
-      </a>
+      </Link>
       <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {project.title}
       </h1>
@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             href={project.demoHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md bg-primary-500 px-4 py-2 text-sm font-medium text-white hover:bg-primary-600"
+            className="bg-primary-500 hover:bg-primary-600 rounded-md px-4 py-2 text-sm font-medium text-white"
           >
             Live Demo &rarr;
           </a>
@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </a>
         )}
       </div>
-      <div className="prose max-w-none dark:prose-invert">
+      <div className="prose dark:prose-invert max-w-none">
         <MDXLayoutRenderer code={project.body.code} components={{ Image }} />
       </div>
     </article>
