@@ -6,12 +6,36 @@ import Image from '@/components/Image'
 
 const skills = [
   'Python',
-  'pandas',
-  'scikit-learn',
   'SQL',
-  'matplotlib',
-  'seaborn',
+  'R',
   'Git',
+  'Machine Learning',
+  'Deep Learning',
+  'Neural Networks',
+  'Natural Language Processing (NLP)',
+  'Artificial Intelligence (AI)',
+  'Generative AI',
+  'Recommender Systems',
+  'Regression Analysis',
+  'Classification',
+  'Clustering',
+  'Statistical Modeling',
+  'Model Selection',
+  'Pandas',
+  'NumPy',
+  'Scikit-Learn',
+  'PyTorch',
+  'TensorFlow',
+  'SciPy',
+  'Matplotlib',
+  'Seaborn',
+  'Plotly',
+  'Data Analysis',
+  'Data Visualization',
+  'Data Mining',
+  'Data Cleaning',
+  'Jupyter Notebook',
+  'Statistics',
 ]
 
 export default function Home() {
@@ -25,14 +49,14 @@ export default function Home() {
             Hi, I'm Brent
           </h1>
           <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-            Aspiring Data Scientist based in Atlanta, GA. I build data-driven projects to develop
+            Data Scientist based in Atlanta, GA. I build data-driven projects to develop
             my skills and transition into the field - from NLP-powered apps to causal inference
             analyses and more.
           </p>
         </div>
         <div className="shrink-0">
           <Image
-            src="/static/images/avatar.png"
+            src="/static/images/profile-pic.jpg"
             alt="Brent Smith"
             width={160}
             height={160}
