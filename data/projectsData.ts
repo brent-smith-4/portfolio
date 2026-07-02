@@ -16,12 +16,13 @@ const projectsData: Project[] = [
     demoHref: 'https://mise-recipe-recommender.fly.dev',
     githubHref: 'https://github.com/brent-smith-4/recipe-recommender',
   },
-  // {
-  //   title: 'Slay the Spire - Causal Analysis',
-  //   description: `A causal analysis of card selection in Slay the Spire and its impact on run outcomes. Exploring how specific card choices influence win rates using causal inference methods.`,
-  //   slug: 'slay-the-spire',
-  //   imgSrc: '/static/images/card-reward.png',
-  // },
+  {
+    title: 'Slay the Spire - Card Selection Study',
+    description: `An analysis of card reward choices in Slay the Spire, controlling for confounders like difficulty level to isolate their true effect on win rate, floors reached, and floors gained. Currently in progress.`,
+    slug: 'slay-the-spire',
+    imgSrc: '/static/images/card-reward.png',
+    githubHref: 'https://github.com/brent-smith-4/sts-card-choice-analysis',
+  },
 ]
 
 export default projectsData
