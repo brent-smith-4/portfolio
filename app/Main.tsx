@@ -64,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* About */}
-      <div id="about" className="space-y-4 pt-10 text-center">
+      <div id="about" className="scroll-mt-24 space-y-4 pt-10 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           About Me
         </h2>
@@ -116,7 +116,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <div id="projects" className="space-y-4 pt-10 text-center">
+      <div id="projects" className="scroll-mt-24 space-y-4 pt-10 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           Projects
         </h2>
@@ -136,7 +136,7 @@ export default function Home() {
       </div>
 
       {/* Skills */}
-      <div id="skills" className="space-y-4 pt-10 text-center">
+      <div id="skills" className="scroll-mt-24 space-y-4 pt-10 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           Skills
         </h2>
@@ -153,7 +153,7 @@ export default function Home() {
       </div>
 
       {/* Contact */}
-      <div id="contact" className="space-y-4 pt-10 pb-10 text-center">
+      <div id="contact" className="scroll-mt-24 space-y-4 pt-10 pb-10 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
           Get in Touch
         </h2>
