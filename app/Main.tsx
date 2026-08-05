@@ -133,6 +133,18 @@ export default function Home() {
             />
           ))}
         </div>
+        <p className="mt-8 text-lg text-gray-600 dark:text-gray-400">
+          More projects and experiments live on my{' '}
+          <a
+            href={siteMetadata.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+          >
+            GitHub
+          </a>
+          .
+        </p>
       </div>
 
       {/* Skills */}
