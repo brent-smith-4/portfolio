@@ -111,8 +111,8 @@ export default function Home() {
           </p>
           <p>
             Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play video
-            games (League, Cyberpunk 2077, Helldivers 2). I am a fan of NFL & NBA:
-            Bengals, Pacers, Pistons, Cavs. Yes I am a midwest boy. And most of all, I try to spend as much time as I can
+            games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL & NBA:
+            Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most importantly, I try to spend as much time as I can
             with family and friends.
           </p>
         </div>
