@@ -95,24 +95,24 @@ export default function Home() {
         </h2>
         <div className="prose max-w-none text-gray-600 dark:text-gray-400">
           <p>
-            I've always been a builder, a solver, and a storyteller. Legos and Star Wars came first,
-            building worlds that weren't on any box set. Then came the storyteller, dreaming up
-            fantasy stories to act out with friends. The solver came last, min-maxing Pokémon and
+            I've always been a builder, a solver, and a storyteller. Growing up I was obsessed with Lego Star Wars;
+            I would build elaborate worlds for my figures to "live in". Then came the storyteller, I loved dreaming up
+            and drawing fantasy stories to enact in my backyard. The solver came last, I was min-maxing Pokémon and
             Destiny builds without realizing that was analysis too.
           </p>
           <p>
             Those instincts led me to a degree in economics with a computer science minor from the
             University of Georgia, and I still can't shake them: I write a fantasy book series in my
-            free time, and I run causal analysis on Slay the Spire for fun. Data science is where it
+            free time, and I create DS/ML projects like Mise & Slay the Spire analysis for fun. Data science is where it
             all merges: identifying what problem you're solving, solving it with data, and telling a
-            story that makes it land. Today I work on the data-quality side of machine learning at
+            story that anyone can listen and learn from. Today I work on the data-quality side of machine learning at
             Shiplify, auditing shipment and property records and labeling messy, ambiguous
             real-world cases.
           </p>
           <p>
-            Outside of work, I cook (hence the Mise project), paint to relax, and play more video
-            games than I'll admit (League, Cyberpunk 2077, Helldivers 2). I bleed Midwest sports:
-            Bengals, Pacers, Pistons, Cavs. And most of all, I try to spend as much time as I can
+            Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play video
+            games (League, Cyberpunk 2077, Helldivers 2). I am a fan of NFL & NBA:
+            Bengals, Pacers, Pistons, Cavs. Yes I am a midwest boy. And most of all, I try to spend as much time as I can
             with family and friends.
           </p>
         </div>
