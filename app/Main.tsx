@@ -95,25 +95,26 @@ export default function Home() {
         </h2>
         <div className="prose max-w-none text-gray-600 dark:text-gray-400">
           <p>
-            I've always been a builder, a solver, and a storyteller. Growing up I was obsessed with Lego Star Wars;
-            I would build elaborate worlds for my figures to "live in". Then came the storyteller, I loved dreaming up
-            and drawing fantasy stories to enact in my backyard. The solver came last, I was min-maxing Pokémon and
-            Destiny builds without realizing that was analysis too.
+            I've always been a builder, a solver, and a storyteller. Growing up I was obsessed with
+            Lego Star Wars; I would build elaborate worlds for my figures to "live in". Then came
+            the storyteller, I loved dreaming up and drawing fantasy stories to enact in my
+            backyard. The solver came last, I was min-maxing Pokémon and Destiny builds without
+            realizing that was analysis too.
           </p>
           <p>
             Those instincts led me to a degree in economics with a computer science minor from the
             University of Georgia, and I still can't shake them: I write a fantasy book series in my
-            free time, and I create DS/ML projects like Mise & Slay the Spire analysis for fun. Data science is where it
-            all merges: identifying what problem you're solving, solving it with data, and telling a
-            story that anyone can listen and learn from. Today I work on the data-quality side of machine learning at
-            Shiplify, auditing shipment and property records and labeling messy, ambiguous
-            real-world cases.
+            free time, and I create DS/ML projects like Mise & Slay the Spire analysis for fun. Data
+            science is where it all merges: identifying what problem you're solving, solving it with
+            data, and telling a story that anyone can listen and learn from. Today I work on the
+            data-quality side of machine learning at Shiplify, auditing shipment and property
+            records and labeling messy, ambiguous real-world cases.
           </p>
           <p>
-            Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play video
-            games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL & NBA:
-            Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most importantly, I try to spend as much time as I can
-            with family and friends.
+            Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play
+            video games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL & NBA:
+            Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most importantly,
+            I try to spend as much time as I can with family and friends.
           </p>
         </div>
       </div>
