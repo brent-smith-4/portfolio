@@ -17,6 +17,7 @@ Next.js, TypeScript, Tailwind CSS, MDX
 - Custom Projects section with dedicated sub-pages for Mise and Slay the Spire Card Choice Analysis technical write-ups
 - Custom Skills taxonomy across 5 categories
 - Custom branding, profile imagery, and SEO/Open Graph metadata
+- Removed unused blog scaffolding from the original template to fit a portfolio-only structure
 
 ## Licence
 
