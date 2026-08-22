@@ -3,13 +3,14 @@ const siteMetadata = {
   title: 'Brent Smith',
   author: 'Brent Smith',
   headerTitle: 'Brent Smith',
-  description: 'Data Scientist based in Atlanta, GA — NLP, causal inference, and machine learning projects.',
+  description:
+    'Data Scientist based in Atlanta, GA — NLP, causal inference, and machine learning projects.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://brentsmith.dev',
   siteRepo: 'https://github.com/brent-smith-4',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/jg-profile-card.png`,
   email: 'brents434@gmail.com',
   github: 'https://github.com/brent-smith-4',
   linkedin: 'https://www.linkedin.com/in/brent-smith-4d/',
