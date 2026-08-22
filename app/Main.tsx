@@ -67,7 +67,8 @@ const skillGroups = [
 // Semi-opaque backing so text stays readable regardless of what's behind it
 // (trees, fireflies, etc). Trees are also structurally confined to the
 // left/right margins outside this content column, so it's belt-and-braces.
-const card = 'bg-forest-surface-light/70 dark:bg-forest-surface-dark/70 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10'
+const card =
+  'bg-forest-surface-light/70 dark:bg-forest-surface-dark/70 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10'
 
 export default function Home() {
   return (
@@ -82,8 +83,8 @@ export default function Home() {
               Hi, I'm Brent
             </h1>
             <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Data Scientist based in Atlanta, GA. I build data-driven projects at the
-              intersection of NLP, causal inference, and machine learning.
+              Data Scientist based in Atlanta, GA. I build data-driven projects at the intersection
+              of NLP, causal inference, and machine learning.
             </p>
           </div>
           <div className="shrink-0">
@@ -110,25 +111,24 @@ export default function Home() {
           <div className="prose max-w-none text-gray-600 dark:text-gray-400">
             <p>
               I've always been a builder, a solver, and a storyteller. Growing up I was obsessed
-              with Lego Star Wars; I would build elaborate worlds for my figures to "live in".
-              Then came the storyteller, I loved dreaming up and drawing fantasy stories to enact
-              in my backyard. The solver came last, I was min-maxing Pokémon and Destiny builds
-              without realizing that was analysis too.
+              with Lego Star Wars; I would build elaborate worlds for my figures to "live in". Then
+              came the storyteller, I loved dreaming up and drawing fantasy stories to enact in my
+              backyard. The solver came last, I was min-maxing Pokémon and Destiny builds without
+              realizing that was analysis too.
             </p>
             <p>
-              Those instincts led me to a degree in economics with a computer science minor from
-              the University of Georgia, and I still can't shake them: I write a fantasy book
-              series in my free time, and I create DS/ML projects like Mise & Slay the Spire
-              analysis for fun. Data science is where it all merges: identifying what problem
-              you're solving, solving it with data, and telling a story that anyone can listen and
-              learn from. Today I work on the data-quality side of machine learning at Shiplify,
-              auditing shipment and property records and labeling messy, ambiguous real-world
-              cases.
+              Those instincts led me to a degree in economics with a computer science minor from the
+              University of Georgia, and I still can't shake them: I write a fantasy book series in
+              my free time, and I create DS/ML projects like Mise & Slay the Spire analysis for fun.
+              Data science is where it all merges: identifying what problem you're solving, solving
+              it with data, and telling a story that anyone can listen and learn from. Today I work
+              on the data-quality side of machine learning at Shiplify, auditing shipment and
+              property records and labeling messy, ambiguous real-world cases.
             </p>
             <p>
-              Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and
-              play video games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL &
-              NBA: Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most
+              Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play
+              video games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL & NBA:
+              Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most
               importantly, I try to spend as much time as I can with family and friends.
             </p>
           </div>
