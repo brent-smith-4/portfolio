@@ -8,14 +8,20 @@ const Card = ({ title, description, imgSrc, slug, demoHref, githubHref }) => (
         imgSrc && 'h-full'
       } overflow-hidden rounded-md border-2 border-gray-200/60 dark:border-gray-700/60`}
     >
+      {/* Brand-consistent masthead so wildly different screenshots (bright
+          app UI vs. a near-black game capture) still read as the same
+          card format instead of clashing with each other. */}
+      <div className="bg-primary-500 h-1.5 w-full" />
       {imgSrc && (
-        <Image
-          alt={title}
-          src={imgSrc}
-          className="object-cover object-center md:h-36 lg:h-48"
-          width={544}
-          height={306}
-        />
+        <div className="ring-1 ring-black/10 ring-inset dark:ring-white/10">
+          <Image
+            alt={title}
+            src={imgSrc}
+            className="aspect-video w-full object-cover object-center"
+            width={544}
+            height={306}
+          />
+        </div>
       )}
       <div className="p-6">
         <h2 className="mb-3 text-2xl leading-8 font-bold tracking-tight">{title}</h2>
