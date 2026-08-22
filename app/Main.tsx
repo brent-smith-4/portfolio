@@ -76,6 +76,7 @@ export default function Home() {
       {/* Hero */}
       <Reveal className="flex min-h-[80vh] flex-col items-center justify-center">
         <div
+          data-header-shadow-target
           className={`${card} flex w-full max-w-4xl flex-col items-center gap-8 text-center sm:flex-row sm:justify-between sm:text-left`}
         >
           <div className="space-y-4">
@@ -104,7 +105,7 @@ export default function Home() {
         id="about"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
       >
-        <div className={`${card} w-full max-w-2xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-2xl space-y-4 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             About Me
           </h2>
@@ -140,7 +141,7 @@ export default function Home() {
         id="projects"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
       >
-        <div className={`${card} w-full max-w-4xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-4xl space-y-4 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             Projects
           </h2>
@@ -177,7 +178,7 @@ export default function Home() {
         id="skills"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
       >
-        <div className={`${card} w-full max-w-4xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-4xl space-y-4 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             Skills
           </h2>
@@ -214,7 +215,7 @@ export default function Home() {
         id="contact"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center pb-10"
       >
-        <div className={`${card} w-full max-w-2xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-2xl space-y-4 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             Get in Touch
           </h2>

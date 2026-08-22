@@ -1,43 +1,79 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import ThemeSwitch from './ThemeSwitch'
 
-// Transparent at the very top of the page (over the hero), so the jungle
-// canopy shows through unbroken. Past a small scroll threshold, hero
-// content scrolls up underneath the sticky nav with nothing separating the
-// two layers - so a backing fades in to keep nav text from colliding with
-// whatever's now behind it. The nav text itself never moves or changes;
-// only this backdrop's opacity animates.
-function useScrolled(threshold = 24) {
-  const [scrolled, setScrolled] = useState(false)
+// Transparent whenever nothing is behind it - the jungle canopy shows
+// through unbroken over gaps between sections, not just at the very top of
+// the page. A backing fades in only while a real content panel
+// (`data-header-shadow-target`, the translucent cards in Main.tsx and the
+// project article panel) is actually scrolled up underneath the header's
+// own footprint, and fades back out once that panel scrolls past. This is
+// overlap detection, not a scroll-distance threshold, so it stays correct
+// as sections and gaps pass by. The nav text itself never moves; only this
+// backdrop's opacity animates.
+function useContentBehindHeader() {
+  const headerRef = useRef<HTMLElement>(null)
+  const [covered, setCovered] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > threshold)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [threshold])
+    const header = headerRef.current
+    if (!header) return
 
-  return scrolled
+    const intersecting = new Set<Element>()
+    let observer: IntersectionObserver
+
+    const setup = () => {
+      observer?.disconnect()
+      intersecting.clear()
+      setCovered(false)
+
+      const headerHeight = header.getBoundingClientRect().height
+      const bottomMargin = Math.max(window.innerHeight - headerHeight, 0)
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) intersecting.add(entry.target)
+            else intersecting.delete(entry.target)
+          }
+          setCovered(intersecting.size > 0)
+        },
+        { rootMargin: `0px 0px -${bottomMargin}px 0px`, threshold: 0 }
+      )
+
+      document.querySelectorAll('[data-header-shadow-target]').forEach((el) => observer.observe(el))
+    }
+
+    setup()
+    window.addEventListener('resize', setup)
+    return () => {
+      observer?.disconnect()
+      window.removeEventListener('resize', setup)
+    }
+  }, [pathname])
+
+  return { headerRef, covered }
 }
 
 const Header = () => {
-  const scrolled = useScrolled()
+  const { headerRef, covered } = useContentBehindHeader()
 
   const headerClass = `flex items-center w-full justify-between px-4 py-10 sm:px-6 ${
     siteMetadata.stickyNav ? 'sticky top-0 z-50' : 'relative'
   }`
 
   return (
-    <header className={headerClass}>
+    <header ref={headerRef} className={headerClass}>
       <div
         aria-hidden="true"
         className={`bg-forest-bg-light/95 dark:bg-forest-bg-dark/95 absolute inset-0 -z-10 backdrop-blur-sm transition-opacity duration-300 ${
-          scrolled ? 'opacity-100' : 'opacity-0'
+          covered ? 'opacity-100' : 'opacity-0'
         }`}
       />
       <Link href="/" aria-label={siteMetadata.headerTitle}>

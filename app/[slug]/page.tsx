@@ -24,7 +24,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound()
 
   return (
-    <article className="bg-forest-surface-light/90 dark:bg-forest-surface-dark/90 mx-auto max-w-3xl space-y-6 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10">
+    <article
+      data-header-shadow-target
+      className="bg-forest-surface-light/90 dark:bg-forest-surface-dark/90 mx-auto max-w-3xl space-y-6 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10"
+    >
       <Link
         href="/#projects"
         className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
