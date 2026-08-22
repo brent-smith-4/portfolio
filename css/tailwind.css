@@ -184,6 +184,22 @@ input:-webkit-autofill:focus {
   vertical-align: middle;
 }
 
+/* Soft halo behind text sitting directly on the jungle background (no card,
+   no bar) - blends with the page's own tone instead of drawing a hard edge,
+   and works for dark text over a bright patch of photo or light text over a
+   dark patch, since the glow color follows light/dark mode automatically. */
+.text-glow {
+  text-shadow:
+    0 0 6px var(--color-forest-bg-light),
+    0 0 10px var(--color-forest-bg-light);
+}
+
+.dark .text-glow {
+  text-shadow:
+    0 0 6px var(--color-forest-bg-dark),
+    0 0 10px var(--color-forest-bg-dark);
+}
+
 @keyframes firefly-rise {
   0% {
     transform: translate(0, 0);

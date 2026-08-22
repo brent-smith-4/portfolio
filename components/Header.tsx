@@ -4,8 +4,7 @@ import Link from './Link'
 import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
-  let headerClass =
-    'flex items-center w-full bg-forest-bg-light/80 dark:bg-forest-bg-dark/80 backdrop-blur-sm justify-between py-10'
+  let headerClass = 'flex items-center w-full justify-between py-10'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -14,9 +13,9 @@ const Header = () => {
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="flex items-center justify-between">
-          <div className="mr-3 translate-y-0.5 text-3xl leading-none">🐸</div>
+          <div className="text-glow mr-3 translate-y-0.5 text-3xl leading-none">🐸</div>
           {typeof siteMetadata.headerTitle === 'string' ? (
-            <div className="hidden h-6 text-2xl font-semibold sm:block">
+            <div className="text-glow hidden h-6 text-2xl font-semibold sm:block">
               {siteMetadata.headerTitle}
             </div>
           ) : (
@@ -30,7 +29,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hover:text-primary-500 dark:hover:text-primary-400 m-1 shrink-0 font-medium text-gray-900 dark:text-gray-100"
+              className="text-glow hover:text-primary-500 dark:hover:text-primary-400 m-1 shrink-0 font-medium text-gray-900 dark:text-gray-100"
             >
               {link.title}
             </Link>
