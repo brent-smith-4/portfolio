@@ -12,10 +12,13 @@ import ThemeSwitch from './ThemeSwitch'
 // the page. A backing fades in only while a real content panel
 // (`data-header-shadow-target`, the translucent cards in Main.tsx and the
 // project article panel) is actually scrolled up underneath the header's
-// own footprint, and fades back out once that panel scrolls past. This is
-// overlap detection, not a scroll-distance threshold, so it stays correct
-// as sections and gaps pass by. The nav text itself never moves; only this
-// backdrop's opacity animates.
+// own footprint, and fades back out once that panel scrolls past.
+//
+// This checks getBoundingClientRect() directly on every scroll/resize frame
+// rather than using IntersectionObserver: IO's callbacks are async and
+// batched, and a mobile browser's address bar collapsing mid-scroll fires
+// resize events that could leave a stale rootMargin snapshot briefly wrong.
+// A synchronous per-frame check has no state to go stale.
 function useContentBehindHeader() {
   const headerRef = useRef<HTMLElement>(null)
   const [covered, setCovered] = useState(false)
@@ -25,36 +28,32 @@ function useContentBehindHeader() {
     const header = headerRef.current
     if (!header) return
 
-    const intersecting = new Set<Element>()
-    let observer: IntersectionObserver
+    const targets = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-header-shadow-target]')
+    )
+    let frame: number | null = null
 
-    const setup = () => {
-      observer?.disconnect()
-      intersecting.clear()
-      setCovered(false)
-
-      const headerHeight = header.getBoundingClientRect().height
-      const bottomMargin = Math.max(window.innerHeight - headerHeight, 0)
-
-      observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) intersecting.add(entry.target)
-            else intersecting.delete(entry.target)
-          }
-          setCovered(intersecting.size > 0)
-        },
-        { rootMargin: `0px 0px -${bottomMargin}px 0px`, threshold: 0 }
-      )
-
-      document.querySelectorAll('[data-header-shadow-target]').forEach((el) => observer.observe(el))
+    const check = () => {
+      frame = null
+      const headerRect = header.getBoundingClientRect()
+      const overlap = targets.some((el) => {
+        const rect = el.getBoundingClientRect()
+        return rect.bottom > headerRect.top && rect.top < headerRect.bottom
+      })
+      setCovered(overlap)
     }
 
-    setup()
-    window.addEventListener('resize', setup)
+    const scheduleCheck = () => {
+      if (frame === null) frame = requestAnimationFrame(check)
+    }
+
+    scheduleCheck()
+    window.addEventListener('scroll', scheduleCheck, { passive: true })
+    window.addEventListener('resize', scheduleCheck)
     return () => {
-      observer?.disconnect()
-      window.removeEventListener('resize', setup)
+      if (frame !== null) cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', scheduleCheck)
+      window.removeEventListener('resize', scheduleCheck)
     }
   }, [pathname])
 
