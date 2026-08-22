@@ -5,7 +5,8 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+  let headerClass =
+    'flex items-center w-full bg-forest-bg-light/80 dark:bg-forest-bg-dark/80 backdrop-blur-sm justify-between py-10'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }

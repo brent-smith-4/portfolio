@@ -36,6 +36,15 @@
   --color-gray-900: oklch(0.21 0.034 264.665);
   --color-gray-950: oklch(0.13 0.028 261.692);
 
+  /* Forest background tones - same hue family as --color-primary-*, shifted
+     lightness/saturation for light vs dark mode so both feel like one site. */
+  --color-forest-bg-light: oklch(0.92 0.045 140);
+  --color-forest-bg-dark: oklch(0.19 0.025 155.826);
+  --color-forest-text-light: oklch(0.32 0.05 140);
+  --color-forest-text-dark: oklch(0.82 0.03 155.826);
+  --color-forest-surface-light: oklch(0.88 0.055 140);
+  --color-forest-surface-dark: oklch(0.27 0.035 155.826);
+
   /* Line heights */
   --line-height-11: 2.75rem;
   --line-height-12: 3rem;
@@ -173,3 +182,64 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+@keyframes firefly-rise {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  30% {
+    transform: translate(var(--fly-sway), -25vh);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(calc(var(--fly-sway) * -1), -50vh);
+    opacity: 0.9;
+  }
+  70% {
+    transform: translate(var(--fly-sway), -75vh);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translate(0, -105vh);
+    opacity: 0;
+  }
+}
+
+.animate-firefly {
+  animation-name: firefly-rise;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-firefly {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
