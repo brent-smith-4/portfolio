@@ -28,7 +28,7 @@ function useScrolled(threshold = 24) {
 const Header = () => {
   const scrolled = useScrolled()
 
-  const headerClass = `flex items-center w-full justify-between py-10 ${
+  const headerClass = `flex items-center w-full justify-between px-4 py-10 sm:px-6 ${
     siteMetadata.stickyNav ? 'sticky top-0 z-50' : 'relative'
   }`
 
