@@ -52,7 +52,7 @@ const Header = () => {
           )}
         </div>
       </Link>
-      <div className="flex min-w-0 flex-1 items-center justify-end space-x-4 leading-5 sm:-mr-6 sm:space-x-6">
+      <div className="flex min-w-0 flex-1 items-center justify-end space-x-4 leading-5 sm:space-x-6">
         <div className="no-scrollbar flex min-w-0 items-center gap-x-4 overflow-x-auto outline-hidden sm:max-w-72 lg:max-w-96">
           {headerNavLinks.map((link) => (
             <Link
