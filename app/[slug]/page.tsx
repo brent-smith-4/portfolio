@@ -24,7 +24,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound()
 
   return (
-    <article className="mx-auto max-w-3xl space-y-6 py-10">
+    <article className="bg-forest-surface-light/90 dark:bg-forest-surface-dark/90 mx-auto max-w-3xl space-y-6 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10">
       <Link
         href="/#projects"
         className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
@@ -34,7 +34,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
         {project.title}
       </h1>
-      <p className="text-lg text-gray-600 dark:text-gray-400">{project.summary}</p>
+      <p className="text-forest-text-light dark:text-forest-text-dark text-lg">{project.summary}</p>
       <div className="flex gap-4">
         {project.demoHref && (
           <a
@@ -51,7 +51,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             href={project.githubHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:bg-forest-surface-light dark:hover:bg-forest-surface-dark rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 dark:border-gray-600 dark:text-gray-300"
+            className="hover:bg-forest-bg-light dark:hover:bg-forest-bg-dark rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 dark:border-gray-600 dark:text-gray-300"
           >
             GitHub &rarr;
           </a>

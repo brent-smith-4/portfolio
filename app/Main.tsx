@@ -68,7 +68,7 @@ const skillGroups = [
 // (trees, fireflies, etc). Trees are also structurally confined to the
 // left/right margins outside this content column, so it's belt-and-braces.
 const card =
-  'bg-forest-surface-light/70 dark:bg-forest-surface-dark/70 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10'
+  'bg-forest-surface-light/90 dark:bg-forest-surface-dark/90 rounded-3xl px-6 py-10 backdrop-blur-sm sm:px-10'
 
 export default function Home() {
   return (
@@ -82,7 +82,7 @@ export default function Home() {
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-gray-100">
               Hi, I'm Brent
             </h1>
-            <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-400">
+            <p className="text-forest-text-light dark:text-forest-text-dark max-w-xl text-lg leading-8">
               Data Scientist based in Atlanta, GA. I build data-driven projects at the intersection
               of NLP, causal inference, and machine learning.
             </p>
@@ -108,7 +108,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             About Me
           </h2>
-          <div className="prose max-w-none text-gray-600 dark:text-gray-400">
+          <div className="prose text-forest-text-light dark:text-forest-text-dark max-w-none">
             <p>
               I've always been a builder, a solver, and a storyteller. Growing up I was obsessed
               with Lego Star Wars; I would build elaborate worlds for my figures to "live in". Then
@@ -157,7 +157,7 @@ export default function Home() {
               />
             ))}
           </div>
-          <p className="mt-8 text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-forest-text-light dark:text-forest-text-dark mt-8 text-lg">
             More projects and experiments live on my{' '}
             <a
               href={siteMetadata.github}
@@ -218,7 +218,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             Get in Touch
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-forest-text-light dark:text-forest-text-dark">
             Reach me at{' '}
             <a
               href={`mailto:${siteMetadata.email}`}

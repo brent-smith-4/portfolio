@@ -19,7 +19,9 @@ const Card = ({ title, description, imgSrc, slug, demoHref, githubHref }) => (
       )}
       <div className="p-6">
         <h2 className="mb-3 text-2xl leading-8 font-bold tracking-tight">{title}</h2>
-        <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+        <p className="prose text-forest-text-light dark:text-forest-text-dark mb-3 max-w-none">
+          {description}
+        </p>
         <div className="flex flex-wrap justify-center gap-6">
           {/* Learn More — comment out when write-ups are not ready */}
           {slug && (
