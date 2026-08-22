@@ -63,7 +63,7 @@ function useContentBehindHeader() {
 const Header = () => {
   const { headerRef, covered } = useContentBehindHeader()
 
-  const headerClass = `flex items-center w-full justify-between px-4 py-10 sm:px-6 ${
+  const headerClass = `flex items-center w-full justify-between px-4 py-4 sm:px-6 ${
     siteMetadata.stickyNav ? 'sticky top-0 z-50' : 'relative'
   }`
 
