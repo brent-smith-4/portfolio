@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Image from '@/components/Image'
 import Reveal from '@/components/Reveal'
+import ContactForm from '@/components/ContactForm'
 
 // Skills given the primary (accent) visual treatment in the pills below.
 const primarySkills = new Set([
@@ -216,12 +217,13 @@ export default function Home() {
         id="contact"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center pb-10"
       >
-        <div data-header-shadow-target className={`${card} w-full max-w-2xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-2xl space-y-6 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             Get in Touch
           </h2>
-          <p className="text-forest-text-light dark:text-forest-text-dark">
-            Reach me at{' '}
+          <ContactForm />
+          <p className="text-forest-text-light dark:text-forest-text-dark border-t border-gray-300/40 pt-6 dark:border-gray-600/40">
+            Prefer email? Reach me at{' '}
             <a
               href={`mailto:${siteMetadata.email}`}
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
