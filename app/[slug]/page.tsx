@@ -49,6 +49,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             Live Demo &rarr;
           </a>
         )}
+        {project.dashboardHref && (
+          <a
+            href={project.dashboardHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary-500 hover:bg-primary-600 rounded-md px-4 py-2 text-sm font-medium text-white"
+          >
+            Dashboard &rarr;
+          </a>
+        )}
         {project.githubHref && (
           <a
             href={project.githubHref}

@@ -136,6 +136,7 @@ export const Project = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     summary: { type: 'string', required: true },
     demoHref: { type: 'string' },
+    dashboardHref: { type: 'string' },
     githubHref: { type: 'string' },
     imgSrc: { type: 'string' },
   },
