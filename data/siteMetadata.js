@@ -6,7 +6,7 @@ const siteMetadata = {
   description:
     'Data Scientist based in Atlanta, GA — NLP, causal inference, and machine learning projects.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://brentsmith.dev',
   siteRepo: 'https://github.com/brent-smith-4',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,

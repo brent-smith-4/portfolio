@@ -4,7 +4,7 @@ import Link from './Link'
 const Card = ({ title, description, imgSrc, slug, demoHref, dashboardHref, githubHref }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div
-      className={`${
+      className={`project-card ${
         imgSrc && 'h-full'
       } overflow-hidden rounded-md border-2 border-gray-200/60 dark:border-gray-700/60`}
     >
@@ -24,16 +24,27 @@ const Card = ({ title, description, imgSrc, slug, demoHref, dashboardHref, githu
         </div>
       )}
       <div className="p-6">
-        <h2 className="mb-3 text-2xl leading-8 font-bold tracking-tight">{title}</h2>
+        <h2 className="mb-3 text-2xl leading-8 font-bold tracking-tight">
+          {slug ? (
+            <Link
+              href={`/${slug}`}
+              className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            >
+              {title}
+            </Link>
+          ) : (
+            title
+          )}
+        </h2>
         <p className="prose text-forest-text-light dark:text-forest-text-dark mb-3 max-w-none">
           {description}
         </p>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-6">
           {/* Learn More — comment out when write-ups are not ready */}
           {slug && (
             <Link
               href={`/${slug}`}
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
+              className="text-base leading-6 font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 dark:hover:text-amber-300"
             >
               Learn more &rarr;
             </Link>

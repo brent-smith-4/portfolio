@@ -259,3 +259,34 @@ input:-webkit-autofill:focus {
     transition: none;
   }
 }
+
+/* Container-level hover on project cards: lift + soft accent-green glow.
+   box-shadow isn't clipped by the card's own overflow-hidden (that only
+   clips content, not the box's own paint effects), so this is safe to put
+   on the same element that clips the image/masthead corners. Purely a
+   :hover effect on the container - the title/link row keep their own
+   independent hover states regardless. */
+.project-card {
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px 4px color-mix(in oklch, var(--color-primary-500) 45%, transparent);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 0 28px 6px color-mix(in oklch, var(--color-primary-400) 55%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: box-shadow 250ms ease;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+}
