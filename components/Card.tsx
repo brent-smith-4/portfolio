@@ -1,7 +1,7 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, slug, demoHref, githubHref }) => (
+const Card = ({ title, description, imgSrc, slug, demoHref, dashboardHref, githubHref }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div
       className={`${
@@ -46,6 +46,16 @@ const Card = ({ title, description, imgSrc, slug, demoHref, githubHref }) => (
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
             >
               Live demo &rarr;
+            </a>
+          )}
+          {dashboardHref && (
+            <a
+              href={dashboardHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
+            >
+              Live Dashboard &rarr;
             </a>
           )}
           {githubHref && (

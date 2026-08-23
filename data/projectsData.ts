@@ -4,6 +4,7 @@ interface Project {
   slug?: string
   imgSrc?: string
   demoHref?: string
+  dashboardHref?: string
   githubHref?: string
 }
 
@@ -21,6 +22,7 @@ const projectsData: Project[] = [
     description: `An analysis of card reward choices in Slay the Spire, controlling for confounders like difficulty level to isolate their true effect on win rate, floors reached, and floors gained. Currently in progress.`,
     slug: 'slay-the-spire',
     imgSrc: '/static/images/card-reward.png',
+    dashboardHref: 'https://brent-smith-4.github.io/sts-card-choice-analysis/',
     githubHref: 'https://github.com/brent-smith-4/sts-card-choice-analysis',
   },
 ]

@@ -84,8 +84,8 @@ export default function Home() {
               Hi, I'm Brent
             </h1>
             <p className="text-forest-text-light dark:text-forest-text-dark max-w-xl text-lg leading-8">
-              Data Scientist based in Atlanta, GA. I build data-driven projects at the intersection
-              of NLP, causal inference, and machine learning.
+              I build things end-to-end: ML systems, data pipelines, full-stack products. Whatever
+              the problem calls for, I'm ready to solve it and tell you how. Based in Atlanta, GA.
             </p>
           </div>
           <div className="shrink-0">
@@ -154,6 +154,7 @@ export default function Home() {
                 imgSrc={d.imgSrc}
                 slug={d.slug}
                 demoHref={d.demoHref}
+                dashboardHref={d.dashboardHref}
                 githubHref={d.githubHref}
               />
             ))}
