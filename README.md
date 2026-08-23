@@ -1,4 +1,4 @@
-![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
+![profile](/public/static/images/jg-profile-card.png)
 
 # Brent Smith — Portfolio
 
