@@ -18,8 +18,8 @@ const projectsData: Project[] = [
     githubHref: 'https://github.com/brent-smith-4/recipe-recommender',
   },
   {
-    title: 'Slay the Spire - Card Selection Study',
-    description: `An analysis of card reward choices in Slay the Spire, controlling for confounders like difficulty level to isolate their true effect on win rate, floors reached, and floors gained. Currently in progress.`,
+    title: 'Card Choice in Slay the Spire',
+    description: `Rogue-like game where the card rewards you choose could make or break a run. ETL pipeline on 7+ million player runs to model/identify what cards are best, controlled for confounders.`,
     slug: 'slay-the-spire',
     imgSrc: '/static/images/card-reward.png',
     dashboardHref: 'https://brent-smith-4.github.io/sts-card-choice-analysis/',

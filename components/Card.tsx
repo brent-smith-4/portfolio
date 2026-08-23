@@ -55,7 +55,7 @@ const Card = ({ title, description, imgSrc, slug, demoHref, dashboardHref, githu
               rel="noopener noreferrer"
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
             >
-              Live Dashboard &rarr;
+              Dashboard &rarr;
             </a>
           )}
           {githubHref && (
