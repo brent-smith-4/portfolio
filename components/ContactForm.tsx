@@ -17,6 +17,10 @@ export default function ContactForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  // Honeypot: invisible to real users (aria-hidden, unfocusable, offscreen),
+  // but bots that blindly fill every field in the DOM tend to fill it in.
+  // Any value here means the API route silently pretends to succeed.
+  const [company, setCompany] = useState('')
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
 
@@ -41,7 +45,12 @@ export default function ContactForm() {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim(),
+          company,
+        }),
       })
       const data = await response.json()
 
@@ -76,6 +85,17 @@ export default function ContactForm() {
       noValidate
       className="mx-auto flex w-full max-w-md flex-col gap-4 text-left"
     >
+      <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+        <input
+          type="text"
+          name="company"
+          tabIndex={-1}
+          autoComplete="off"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+        />
+      </div>
+
       <div>
         <label htmlFor="contact-name" className={labelClass}>
           Name

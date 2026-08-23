@@ -7,11 +7,18 @@ export const dynamic = 'force-dynamic'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export async function POST(request: Request) {
-  let body: { name?: string; email?: string; message?: string }
+  let body: { name?: string; email?: string; message?: string; company?: string }
   try {
     body = await request.json()
   } catch {
     return NextResponse.json({ ok: false, error: 'Invalid request body.' }, { status: 400 })
+  }
+
+  // Honeypot: a real user never sees or fills this field. Any value means a
+  // bot filled every input it found in the DOM - pretend success so it has
+  // no signal to adapt, without actually sending anything.
+  if (body.company) {
+    return NextResponse.json({ ok: true })
   }
 
   const name = body.name?.trim() ?? ''
