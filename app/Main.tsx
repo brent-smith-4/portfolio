@@ -223,14 +223,7 @@ export default function Home() {
           </h2>
           <ContactForm />
           <p className="text-forest-text-light dark:text-forest-text-dark border-t border-gray-300/40 pt-6 dark:border-gray-600/40">
-            Reach me at{' '}
-            <a
-              href={`mailto:${siteMetadata.email}`}
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            >
-              {siteMetadata.email}
-            </a>{' '}
-            or connect on{' '}
+            Connect with me on{' '}
             <a
               href={siteMetadata.linkedin}
               target="_blank"
