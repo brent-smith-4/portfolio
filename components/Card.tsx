@@ -36,7 +36,7 @@ const Card = ({ title, description, imgSrc, slug, demoHref, dashboardHref, githu
             title
           )}
         </h2>
-        <p className="prose text-forest-text-light dark:text-forest-text-dark mb-3 max-w-none text-left">
+        <p className="prose text-forest-text-light dark:text-forest-text-dark mb-3 max-w-none">
           {description}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-6">
