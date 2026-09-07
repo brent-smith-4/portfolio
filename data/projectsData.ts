@@ -11,7 +11,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: 'Mise - Recipe Recommender',
-    description: `Tell Mise what you're craving: a vibe, an ingredient, a cuisine - and it returns recipes that match. Built with keyword matching and semantic transformers to understand natural language input.`,
+    description: `Tell Mise what you're craving: a vibe, an ingredient, a cuisine - and it returns recipes that match. Built with keyword matching (BM25) and semantic transformers (MiniLM) to understand natural language input.`,
     slug: 'mise',
     imgSrc: '/static/images/mise-icon.png',
     demoHref: 'https://mise-recipe-recommender.fly.dev',
@@ -19,7 +19,7 @@ const projectsData: Project[] = [
   },
   {
     title: 'Card Choice in Slay the Spire',
-    description: `Rogue-like game where the card rewards you choose could make or break a run. ETL pipeline on 7+ million player runs to model/identify what cards are best, controlled for confounders.`,
+    description: `Rogue-like game where the cards you choose could make or break a run. Logistic regression across 3,100+ card-character pairs from 6.2M player runs, checked for false discovery and unstable estimates.`,
     slug: 'slay-the-spire',
     imgSrc: '/static/images/card-reward.png',
     dashboardHref: 'https://brent-smith-4.github.io/sts-card-choice-analysis/',
