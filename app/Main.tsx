@@ -110,7 +110,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
             About Me
           </h2>
-          <div className="prose text-forest-text-light dark:text-forest-text-dark max-w-none">
+          <div className="prose text-forest-text-light dark:text-forest-text-dark max-w-none text-left">
             <p>
               I've always been a builder, a solver, and a storyteller. Growing up I was obsessed
               with Lego Star Wars; I would build elaborate worlds for my figures to "live in". Then
