@@ -101,38 +101,39 @@ export default function Home() {
         </div>
       </Reveal>
 
-      {/* About */}
+      {/* Skills */}
       <Reveal
-        id="about"
+        id="skills"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
       >
-        <div data-header-shadow-target className={`${card} w-full max-w-2xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-4xl space-y-4 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-            About Me
+            Skills
           </h2>
-          <div className="prose text-forest-text-light dark:text-forest-text-dark max-w-none text-left">
-            <p>
-              I've always been a builder, a solver, and a storyteller. Growing up I was obsessed
-              with Lego Star Wars; I would build elaborate worlds for my figures to "live in". Then
-              came the storyteller, I loved dreaming up and drawing fantasy stories to enact in my
-              backyard. The solver came last, I was min-maxing Pokémon and Destiny builds without
-              realizing that was analysis too.
-            </p>
-            <p>
-              Those instincts led me to a degree in economics with a computer science minor from the
-              University of Georgia, and I still can't shake them: I write a fantasy book series in
-              my free time, and I create DS/ML projects like Mise & Slay the Spire analysis for fun.
-              Data science is where it all merges: identifying what problem you're solving, solving
-              it with data, and telling a story that anyone can listen and learn from. Today I work
-              on the data-quality side of machine learning at Shiplify, auditing shipment and
-              property records and labeling messy, ambiguous real-world cases.
-            </p>
-            <p>
-              Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play
-              video games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL & NBA:
-              Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most
-              importantly, I try to spend as much time as I can with family and friends.
-            </p>
+          <div className="space-y-2.5">
+            {skillGroups.map((group) => (
+              <div key={group.title} className="space-y-2">
+                <h3 className="text-primary-700 dark:text-primary-400 text-sm font-semibold tracking-wide uppercase">
+                  {group.title}
+                </h3>
+                <div
+                  className={
+                    group.layout === 'grid'
+                      ? 'grid grid-cols-2 justify-center gap-2 sm:grid-cols-[repeat(3,auto)]'
+                      : 'flex flex-wrap justify-center gap-2'
+                  }
+                >
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-forest-bg-light dark:bg-forest-bg-dark rounded-md px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Reveal>
@@ -175,39 +176,38 @@ export default function Home() {
         </div>
       </Reveal>
 
-      {/* Skills */}
+      {/* About */}
       <Reveal
-        id="skills"
+        id="about"
         className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
       >
-        <div data-header-shadow-target className={`${card} w-full max-w-4xl space-y-4 text-center`}>
+        <div data-header-shadow-target className={`${card} w-full max-w-2xl space-y-4 text-center`}>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-            Skills
+            About Me
           </h2>
-          <div className="space-y-2.5">
-            {skillGroups.map((group) => (
-              <div key={group.title} className="space-y-2">
-                <h3 className="text-primary-700 dark:text-primary-400 text-sm font-semibold tracking-wide uppercase">
-                  {group.title}
-                </h3>
-                <div
-                  className={
-                    group.layout === 'grid'
-                      ? 'grid grid-cols-2 justify-center gap-2 sm:grid-cols-[repeat(3,auto)]'
-                      : 'flex flex-wrap justify-center gap-2'
-                  }
-                >
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-forest-bg-light dark:bg-forest-bg-dark rounded-md px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="prose text-forest-text-light dark:text-forest-text-dark max-w-none text-left">
+            <p>
+              I've always been a builder, a solver, and a storyteller. Growing up I was obsessed
+              with Lego Star Wars; I would build elaborate worlds for my figures to "live in". Then
+              came the storyteller, I loved dreaming up and drawing fantasy stories to enact in my
+              backyard. The solver came last, I was min-maxing Pokémon and Destiny builds without
+              realizing that was analysis too.
+            </p>
+            <p>
+              Those instincts led me to a degree in economics with a computer science minor from the
+              University of Georgia, and I still can't shake them: I write a fantasy book series in
+              my free time, and I create DS/ML projects like Mise & Slay the Spire analysis for fun.
+              Data science is where it all merges: identifying what problem you're solving, solving
+              it with data, and telling a story that anyone can listen and learn from. Today I work
+              on the data-quality side of machine learning at Shiplify, auditing shipment and
+              property records and labeling messy, ambiguous real-world cases.
+            </p>
+            <p>
+              Outside of work, I cook (hence the Mise project), paint to relax, rock climb, and play
+              video games (League, Cyberpunk 2077, Helldivers 2). I am a fan of the NFL & NBA:
+              Bengals, Pacers, Pistons, and Cavs. Yes, I was born a midwest boy. And most
+              importantly, I try to spend as much time as I can with family and friends.
+            </p>
           </div>
         </div>
       </Reveal>
