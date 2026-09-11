@@ -17,51 +17,45 @@ const primarySkills = new Set([
 
 const skillGroups = [
   {
-    title: 'Languages & Tools',
-    skills: ['Python', 'SQL', 'R', 'Git', 'Jupyter Notebook'],
-  },
-  {
-    title: 'Machine Learning & AI',
-    // Fixed 3-column grid (2 rows x 3 cols) instead of flex-wrap so rows are
-    // predictable. The two long entries are placed together in row 1.
-    layout: 'grid',
+    title: 'ML/DS',
     skills: [
-      'Natural Language Processing (NLP)',
-      'Artificial Intelligence (AI)',
       'Machine Learning',
-      'Deep Learning',
-      'Neural Networks',
-      'Recommender Systems',
-    ],
-  },
-  {
-    title: 'Statistics & Modeling',
-    skills: [
-      'Regression Analysis',
       'Classification',
-      'Clustering',
-      'Statistical Modeling',
-      'Model Selection',
-      'Statistics',
+      'Regression',
+      'Predictive Modeling',
+      'Data Mining',
+      'Statistical Inference',
+      'Causal Effect Estimation',
+      'Neural Networks',
+      'Natural Language Processing',
     ],
   },
   {
-    title: 'Libraries & Frameworks',
+    title: 'Libraries/Frameworks',
     skills: [
-      'Pandas',
-      'NumPy',
-      'Scikit-Learn',
       'PyTorch',
       'TensorFlow',
-      'SciPy',
+      'Keras',
+      'Scikit-learn',
+      'Statsmodels',
+      'Pandas',
+      'NumPy',
       'Matplotlib',
       'Seaborn',
       'Plotly',
     ],
   },
   {
-    title: 'Data Analysis',
-    skills: ['Data Analysis', 'Data Visualization', 'Data Mining', 'Data Cleaning'],
+    title: 'Data Engineering',
+    skills: ['PySpark', 'Delta Lake', 'Dagster', 'Databricks'],
+  },
+  {
+    title: 'Tools',
+    skills: ['FastAPI', 'Git', 'Jupyter', 'Claude Code', 'Data Visualization'],
+  },
+  {
+    title: 'Programming Languages',
+    skills: ['Python', 'TypeScript', 'Java', 'SQL', 'R'],
   },
 ]
 
@@ -116,13 +110,7 @@ export default function Home() {
                 <h3 className="text-primary-700 dark:text-primary-400 text-sm font-semibold tracking-wide uppercase">
                   {group.title}
                 </h3>
-                <div
-                  className={
-                    group.layout === 'grid'
-                      ? 'grid grid-cols-2 justify-center gap-2 sm:grid-cols-[repeat(3,auto)]'
-                      : 'flex flex-wrap justify-center gap-2'
-                  }
-                >
+                <div className="flex flex-wrap justify-center gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
