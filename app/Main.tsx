@@ -95,37 +95,6 @@ export default function Home() {
         </div>
       </Reveal>
 
-      {/* Skills */}
-      <Reveal
-        id="skills"
-        className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
-      >
-        <div data-header-shadow-target className={`${card} w-full max-w-4xl space-y-4 text-center`}>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-            Skills
-          </h2>
-          <div className="space-y-2.5">
-            {skillGroups.map((group) => (
-              <div key={group.title} className="space-y-2">
-                <h3 className="text-primary-700 dark:text-primary-400 text-sm font-semibold tracking-wide uppercase">
-                  {group.title}
-                </h3>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-forest-bg-light dark:bg-forest-bg-dark rounded-md px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Reveal>
-
       {/* Projects */}
       <Reveal
         id="projects"
@@ -161,6 +130,37 @@ export default function Home() {
             </a>
             .
           </p>
+        </div>
+      </Reveal>
+
+      {/* Skills */}
+      <Reveal
+        id="skills"
+        className="flex min-h-[70vh] scroll-mt-24 flex-col items-center justify-center"
+      >
+        <div data-header-shadow-target className={`${card} w-full max-w-4xl space-y-4 text-center`}>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+            Skills
+          </h2>
+          <div className="space-y-2.5">
+            {skillGroups.map((group) => (
+              <div key={group.title} className="space-y-2">
+                <h3 className="text-primary-700 dark:text-primary-400 text-sm font-semibold tracking-wide uppercase">
+                  {group.title}
+                </h3>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="bg-forest-bg-light dark:bg-forest-bg-dark rounded-md px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Reveal>
 
