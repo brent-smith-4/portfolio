@@ -20,12 +20,9 @@ const skillGroups = [
     title: 'ML/DS',
     skills: [
       'Machine Learning',
-      'Classification',
       'Regression',
       'Predictive Modeling',
-      'Data Mining',
-      'Statistical Inference',
-      'Causal Effect Estimation',
+      'Statistics',
       'Neural Networks',
       'Natural Language Processing',
     ],
@@ -35,13 +32,11 @@ const skillGroups = [
     skills: [
       'PyTorch',
       'TensorFlow',
-      'Keras',
       'Scikit-learn',
       'Statsmodels',
       'Pandas',
       'NumPy',
       'Matplotlib',
-      'Seaborn',
       'Plotly',
     ],
   },
@@ -51,11 +46,11 @@ const skillGroups = [
   },
   {
     title: 'Tools',
-    skills: ['FastAPI', 'Git', 'Jupyter', 'Claude Code', 'Data Visualization'],
+    skills: ['FastAPI', 'Git', 'Jupyter', 'Claude Code'],
   },
   {
-    title: 'Programming Languages',
-    skills: ['Python', 'TypeScript', 'Java', 'SQL', 'R'],
+    title: 'Languages',
+    skills: ['Python', 'Java', 'SQL', 'R'],
   },
 ]
 
