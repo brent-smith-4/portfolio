@@ -10,7 +10,7 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'Mise - Recipe Search Engine',
+    title: 'Mise - Hybrid NLP Recipe Recommender',
     description: `Tell Mise what you're craving: a vibe, an ingredient, a cuisine - and it returns recipes that match. Built with keyword matching (BM25) and semantic transformers (MiniLM) to understand natural language input.`,
     slug: 'mise',
     imgSrc: '/static/images/mise-icon.png',
